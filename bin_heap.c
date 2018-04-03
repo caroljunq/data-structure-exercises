@@ -3,6 +3,8 @@
 
 //Min Binary Heap with Percolate Up and Down operations
 //Class number 5 --> April  2, 2018
+//Array Implementation
+
 typedef struct{
   int key;
   void *value;
