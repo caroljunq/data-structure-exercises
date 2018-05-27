@@ -56,15 +56,13 @@ def main():
     while True:
         counter +=1
         graph = {}
-        n_entry = nextLine()
-        n = int(n_entry)
+        n = int(nextLine())
 
         for i in range(n):
             beverage = input()
             graph[beverage] = [i]
 
-        m_entry = nextLine()
-        m = int(m_entry)
+        m = int(nextLine())
 
         for _ in range(m):
             e = nextLine()
