@@ -11,17 +11,15 @@ def kahn_sort(graph):
     #stores in_degree for each node
     in_degree = {v: 0 for v in graph.keys()}
 
-
     # for u in graph:
     #     in_degree[u] = 0
     #     for v in graph:
-    #         # get all elements except first (insertion index)
+    #     # get all elements except first (insertion index)
     #         if u in graph[v][1:]:
     #             in_degree[u] += 1
 
-    # count incoming edges for each node
-    for adj in graph.values():
-        for v in adj[1:]:
+    for u in graph:
+        for v in graph[u][1:]:
             in_degree[v] += 1
 
     # select all nodes with 0 incoming edges
@@ -68,7 +66,6 @@ def main():
             e = nextLine()
             entry = e.split(' ')
             graph[entry[0]].append(entry[1])
-
         result = kahn_sort(graph)
         print("Case #"+ str(counter) + ": Dilbert should drink beverages in this order: " + ' '.join(result) + '.\n')
 
