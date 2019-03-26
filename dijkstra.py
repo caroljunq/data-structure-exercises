@@ -136,4 +136,4 @@ graph = {
     'f': {'d':2,'e':2}
 }
 
-print(dijkstra_pq(graph,'e'))
+print(dijkstra_pq(graph,'a','f'))
